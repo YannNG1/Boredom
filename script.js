@@ -1,8 +1,0 @@
-//Chronometre
-
-
-//Horloge
-
-
-//Dark-mode
-

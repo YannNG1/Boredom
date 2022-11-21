@@ -1,0 +1,3 @@
+function ajoutSon() {
+  alert("Jamais.");
+}
