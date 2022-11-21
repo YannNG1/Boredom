@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css" />
     <!-- lien vers une feuille de style en css -->
 
-    <script src="script.js"></script>
+    <script src="dark-mode.js"></script>
     <!-- lien vers un programme en JavaScript -->
   </head>
 
@@ -20,11 +20,17 @@
     <button id="boutton" onclick="darkMode(); darkText(); whiteText()">
       ☼
     </button>
+
     <center>
+      <!Horloge>
       <div id="clock">8:10:45</div>
+      <script src="horloge.js"></script>
+      
+      <!Son>
       <div>
         <button id="boutton2" onclick="ajoutSon()">Mettre du son</button>
       </div>
+      <script src="son.js"></script>
       <div>
         <input type="range" class="slide" min="0" max="1" step="any" />
       </div>
@@ -35,137 +41,10 @@
           <div class="slider round"></div>
         </label>
       </div>
-      <h1><time>00:00:00</time></h1>
-      <div>
-        <button id="strt">Start</button>
-        <button id="stp">Stop</button>
-        <button id="rst">Reset</button>
-      </div>
-      <script>
-        function ajoutSon() {
-          alert("Jamais.");
-        }
-      </script>
-      <script>
-        function darkMode() {
-          var element = document.body;
-          element.classList.toggle("dark-mode");
-        }
+      <div id="timer"></div>
+      <script src="timer.js"></script>
 
-        var action = 1;
-
-        function darkText() {
-          if (action == 1) {
-            document.getElementById("clock").style.borderColor = "#121212";
-            document.getElementById("clock").style.color = "#121212";
-            document.getElementById("boutton").textContent = "☽";
-            action = 2;
-          } else {
-            document.getElementById("clock").style.borderColor = "#f7f7f7";
-            document.getElementById("clock").style.color = "#f7f7f7";
-            document.getElementById("boutton").textContent = "☼";
-            action = 1;
-          }
-        }
-      </script>
-      <script>
-        var h1 = document.getElementsByTagName("h1")[0];
-        var start = document.getElementById("strt");
-        var stop = document.getElementById("stp");
-        var reset = document.getElementById("rst");
-        var sec = 0;
-        var min = 0;
-        var hrs = 0;
-        var t;
-
-        function tick() {
-          sec++;
-          if (sec >= 60) {
-            sec = 0;
-            min++;
-            if (min >= 60) {
-              min = 0;
-              hrs++;
-            }
-          }
-        }
-        function add() {
-          tick();
-          h1.textContent =
-            (hrs > 9 ? hrs : "0" + hrs) +
-            ":" +
-            (min > 9 ? min : "0" + min) +
-            ":" +
-            (sec > 9 ? sec : "0" + sec);
-          timer();
-        }
-        function timer() {
-          t = setTimeout(add, 1000);
-        }
-
-        timer();
-        start.onclick = timer;
-        stop.onclick = function () {
-          clearTimeout(t);
-        };
-        reset.onclick = function () {
-          h1.textContent = "00:00:00";
-          sec = 0;
-          min = 0;
-          hrs = 0;
-        };
-      </script>
-      <script>
-        setInterval(showTime, 1000);
-        function showTime() {
-          let time = new Date();
-          let hour = time.getHours();
-          let min = time.getMinutes();
-          let sec = time.getSeconds();
-          let am_pm = "AM";
-
-          if (hour > 12) {
-            hour -= 12;
-            am_pm = "PM";
-          }
-          if (hour == 0) {
-            let hr = 12;
-            am_pm = "AM";
-          }
-
-          hour = hour < 10 ? "0" + hour : hour;
-          min = min < 10 ? "0" + min : min;
-          sec = sec < 10 ? "0" + sec : sec;
-
-          let currentTime = hour + ":" + min + ":" + sec + am_pm;
-
-          document.getElementById("clock").innerHTML = currentTime;
-        }
-
-        showTime();
-      </script>
-      <script>
-        function darkMode() {
-          var element = document.body;
-          element.classList.toggle("dark-mode");
-        }
-
-        var action = 1;
-
-        function darkText() {
-          if (action == 1) {
-            document.getElementById("clock").style.borderColor = "#121212";
-            document.getElementById("clock").style.color = "#121212";
-            document.getElementById("boutton").textContent = "☽";
-            action = 2;
-          } else {
-            document.getElementById("clock").style.borderColor = "#f7f7f7";
-            document.getElementById("clock").style.color = "#f7f7f7";
-            document.getElementById("boutton").textContent = "☼";
-            action = 1;
-          }
-        }
-      </script>
+      <script></script>
     </center>
   </body>
 </html>
