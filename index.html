@@ -8,43 +8,60 @@
         initial-scale=1.0"
     />
 
-    <title>Ennuie</title>
+    <title>Ennui</title>
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.global/e4940819-d27a-4f60-930f-06c7107dd052/076adafd-6546-4d56-aee1-024b990a29d6.image.png?v=1669027335789"
+    />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="boutton.css" />
     <!-- lien vers une feuille de style en css -->
 
-    <script src="dark-mode.js"></script>
+    <script src="js/dark-mode.js"></script>
     <!-- lien vers un programme en JavaScript -->
+    <link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
+    
   </head>
-
   <body>
-    <button id="boutton" onclick="darkMode(); darkText(); whiteText()">
-      ☼
-    </button>
-
+    <div id="truc">
+      <script src="js/date.js"></script>
+      <br>
+      <button
+        class="bttn-slant bttn-md bttn-primary"
+        id="boutton"
+        onclick="darkMode(); darkText(); whiteText()"
+      >
+        Light mode
+      </button>
+    </div>
     <center>
       <!Horloge>
       <div id="clock">8:10:45</div>
-      <script src="horloge.js"></script>
-      
+      <script src="js/horloge.js"></script>
+
       <!Son>
       <div>
         <button id="boutton2" onclick="ajoutSon()">Mettre du son</button>
       </div>
-      <script src="son.js"></script>
+      <script src="js/son.js"></script>
+      
+      <!Slide>
       <div>
         <input type="range" class="slide" min="0" max="1" step="any" />
       </div>
       <br />
+      
+      <!Switch>
       <div>
         <label class="switch">
           <input type="checkbox" />
-          <div class="slider round"></div>
+          <div class="switcher round"></div>
         </label>
+        
+        <!Timer>
       </div>
       <div id="timer"></div>
-      <script src="timer.js"></script>
-
-      <script></script>
+      <script src="js/timer.js"></script>
     </center>
   </body>
 </html>
