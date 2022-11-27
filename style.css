@@ -1,4 +1,4 @@
-#truc {
+#banner {
   font-family: "Segoe UI";
   color: #f0f0f0;
   padding-left: 20px;
@@ -45,14 +45,15 @@ button {
   -webkit-appearance: none;
   background: #dfdfdf;
   outline: none;
-  border-radius: 1000px;
+  border-radius: 30px;
 }
+
 
 .switch {
   position: relative;
   display: inline-block;
   width: 60px;
-  height: 34px;
+  height: 39px;
 }
 
 .switcher.round {
@@ -78,8 +79,8 @@ button {
 .switcher:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 31px;
+  width: 31px;
   left: 4px;
   bottom: 4px;
   background-color: white;
@@ -92,7 +93,7 @@ input:checked + .switcher {
 }
 
 input:focus + .switcher {
-  box-shadow: 0 0 1px #bfbfbf²;
+  box-shadow: 0 0 1px #bfbfbf;
 }
 
 input:checked + .switcher:before {

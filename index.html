@@ -7,8 +7,33 @@
       content="width=device-width, 
         initial-scale=1.0"
     />
+    <!-- Meta tags for SEO and social sharing -->
 
-    <title>Ennui</title>
+    <link rel="canonical" href="https://boredom-site.glitch.me/" />
+
+    <meta
+      name="description"
+      content="I'm so bored I don't know what I'm doing please send help!"
+    />
+
+    <meta name="robots" content="index,follow" />
+
+    <meta property="og:title" content="Boredom" />
+
+    <meta property="og:type" content="article" />
+
+    <meta property="og:url" content="https://boredom-site.glitch.me/" />
+
+    <meta
+      property="og:description"
+      content="I'm so bored I don't know what I'm doing please send help!"
+    />
+    <meta
+      property="og:image"
+      content="https://cdn.glitch.global/e4940819-d27a-4f60-930f-06c7107dd052/076adafd-6546-4d56-aee1-024b990a29d6.image.png?v=1669027335789"
+    />
+    <meta name="twitter:card" content="summary" />
+    <title>Boredom</title>
     <link
       rel="shortcut icon"
       href="https://cdn.glitch.global/e4940819-d27a-4f60-930f-06c7107dd052/076adafd-6546-4d56-aee1-024b990a29d6.image.png?v=1669027335789"
@@ -19,13 +44,12 @@
 
     <script src="js/dark-mode.js"></script>
     <!-- lien vers un programme en JavaScript -->
-    <link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
-    
+    <link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet" />
   </head>
   <body>
-    <div id="truc">
+    <div id="banner">
       <script src="js/date.js"></script>
-      <br>
+      <br />
       <button
         class="bttn-slant bttn-md bttn-primary"
         id="boutton"
@@ -41,23 +65,23 @@
 
       <!Son>
       <div>
-        <button id="boutton2" onclick="ajoutSon()">Mettre du son</button>
+        <button id="boutton2" onclick="ajoutSon()">Enable sound</button>
       </div>
       <script src="js/son.js"></script>
-      
+
       <!Slide>
       <div>
-        <input type="range" class="slide" min="0" max="1" step="any" />
+        <input class="slide" type="range" min="0" max="1" step="any" />
       </div>
       <br />
-      
+
       <!Switch>
       <div>
         <label class="switch">
           <input type="checkbox" />
           <div class="switcher round"></div>
         </label>
-        
+
         <!Timer>
       </div>
       <div id="timer"></div>
